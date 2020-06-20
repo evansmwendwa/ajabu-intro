@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./components/Header";
 import Welcome from "./components/Welcome";
+import FAQ from "./components/FAQ";
 
 export default function App() {
   return (
@@ -8,6 +9,7 @@ export default function App() {
       <Header />
       <div className="container">
         <Welcome />
+        <FAQ />
       </div>
     </div>
   );

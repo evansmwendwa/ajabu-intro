@@ -31,7 +31,7 @@ export default function Header() {
     <Welcome>
       <div className="video">
         <div>
-          <ResponsiveEmbed src='https://www.youtube.com/embed/2yqz9zgoC-U' allowFullScreen />
+          <ResponsiveEmbed src='https://www.youtube.com/embed/g_xfjEvcFno' allowFullScreen />
         </div>
         <div>
           <h3>Get notified when we launch</h3>
