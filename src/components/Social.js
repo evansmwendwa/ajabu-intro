@@ -34,13 +34,25 @@ export default function () {
     <SocialButtons>
       <h3>Visit our Social Media accounts for more streaming content</h3>
       <div className="buttons">
-        <a href="https://web.facebook.com/AjabuTv?_rdc=1&_rdr" target="_blank">
+        <a
+          href="https://web.facebook.com/AjabuTv?_rdc=1&_rdr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={facebook} alt="Facebook" />
         </a>
-        <a href="https://twitter.com/AjabuTv" target="_blank">
+        <a
+          href="https://twitter.com/AjabuTv"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={twitter} alt="Twitter" />
         </a>
-        <a href="https://www.instagram.com/ajabutv" target="_blank">
+        <a
+          href="https://www.instagram.com/ajabutv"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img src={instagram} alt="Instagram" />
         </a>
       </div>
