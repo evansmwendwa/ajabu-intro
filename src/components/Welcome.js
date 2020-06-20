@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import ResponsiveEmbed from "react-responsive-embed";
 import SubscribeForm from "./Form";
+import SocialMedia from "./Social";
 
 const Welcome = styled.div`
   position: relative;
@@ -20,12 +21,22 @@ const Welcome = styled.div`
     .intro {
       width: 45%;
       padding: 15px;
+
+      h2 {
+        font-weight: 500;
+        font-size: 26px;
+        margin-top: 0;
+      }
     }
   }
 
   h3 {
     margin: 20px 0 3px 0;
     font-weight: 500;
+  }
+
+  .subscribe-form {
+    padding: 0 15px;
   }
 `;
 
@@ -38,7 +49,7 @@ export default function Header() {
         </div>
         <div className="intro">
           <h2>We have a story to tell</h2>
-          <p>Out with the old- In with Ajabu TV, a new way to earn money, discover and enjoy great content.</p>
+          <p>Out with the old - In with Ajabu TV, a new way to earn money, discover and enjoy great content.</p>
           <p>
             For brands, it’s the freshest way to connect with your target audience in exciting new ways,
             leveraging on user generated content. Let’s partner to build campaigns that resonate and put
@@ -60,6 +71,8 @@ export default function Header() {
         <h3>Get notified when we launch</h3>
         <SubscribeForm />
       </div>
+
+      <SocialMedia />
     </Welcome>
   );
 }

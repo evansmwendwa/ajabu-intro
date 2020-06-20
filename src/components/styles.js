@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SubscribeForm = styled.form`
+  position: relative;
 `;
 
 export const InputBox = styled.div`
@@ -22,7 +23,7 @@ export const InputBox = styled.div`
     outline: none;
     font-size: 13px;
     padding: 12px;
-    border-radius: 3px;
+    border-radius: 2px;
   }
 `;
 
@@ -30,8 +31,8 @@ export const InputError = styled.div`
   position: relative;
   color: red;
   font-size: 12px;
-  padding: 5px 0 8px;
-  border-bottom: 1px solid #EBEBEB;
+  background: #f5f5f5;
+  padding: 5px 12px;
 `;
 
 export const Button = styled.button`

@@ -6,11 +6,11 @@ import FAQ from "./components/FAQ";
 export default function App() {
   return (
     <div className="App">
-      <Header />
       <div className="container">
         <Welcome />
         <FAQ />
       </div>
+      <Header />
     </div>
   );
 }
