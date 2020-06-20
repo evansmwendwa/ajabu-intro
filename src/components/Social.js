@@ -16,6 +16,10 @@ const SocialButtons = styled.div`
   .buttons {
     padding-top: 15px;
 
+    a {
+      text-decoration: none;
+    }
+
     img {
       width: 40px;
       height: 40px;
@@ -30,9 +34,15 @@ export default function () {
     <SocialButtons>
       <h3>Visit our Social Media accounts for more streaming content</h3>
       <div className="buttons">
-        <img src={facebook} alt="Facebook" />
-        <img src={twitter} alt="Twitter" />
-        <img src={instagram} alt="Instagram" />
+        <a href="https://web.facebook.com/AjabuTv?_rdc=1&_rdr" target="_blank">
+          <img src={facebook} alt="Facebook" />
+        </a>
+        <a href="https://twitter.com/AjabuTv" target="_blank">
+          <img src={twitter} alt="Twitter" />
+        </a>
+        <a href="https://www.instagram.com/ajabutv" target="_blank">
+          <img src={instagram} alt="Instagram" />
+        </a>
       </div>
     </SocialButtons>
   )
