@@ -12,6 +12,7 @@ export const InputBox = styled.div`
 
   &.right {
     padding-left: 6px;
+    padding-right: 12px;
   }
 
   input {
@@ -25,18 +26,12 @@ export const InputBox = styled.div`
   }
 `;
 
-export const HorizontalForm = styled.div`
-  display: flex;
-  padding: 12px 0;
-  ${InputBox} {
-    width: 50%;
-  }
-`;
-
 export const InputError = styled.div`
   position: relative;
   color: red;
   font-size: 12px;
+  padding: 5px 0 8px;
+  border-bottom: 1px solid #EBEBEB;
 `;
 
 export const Button = styled.button`
@@ -46,9 +41,17 @@ export const Button = styled.button`
   text-align: center;
   font-weight: 500;
   outline: none;
-  width: 100%;
+  width: 30%;
   padding: 12px;
   border-radius: 3px;
   cursor: pointer;
   letter-spacing: 1px;
+`;
+
+export const HorizontalForm = styled.div`
+  display: flex;
+  padding: 12px 0;
+  ${InputBox} {
+    width: 50%;
+  }
 `;

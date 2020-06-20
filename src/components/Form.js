@@ -62,9 +62,9 @@ export default function () {
               <InputError>{formik.errors.email}</InputError>
             )}
           </InputBox>
-        </HorizontalForm>
 
-        <Button type="submit">Notify Me</Button>
+          <Button type="submit">Notify Me</Button>
+        </HorizontalForm>
       </form>
     </SubscribeForm>
   )
