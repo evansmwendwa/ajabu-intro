@@ -4,7 +4,7 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Segoe UI', 'Montserrat', sans-serif;
 }
 
 *, *:before, *:after {
@@ -13,12 +13,13 @@ html, body {
 
 body {
   font-size: 13px;
-  background: #F5F5F5
+  background: #F5F5F5;
+  padding-top: 70px;
 }
 
 .container {
   position: relative;
   width: 100%;
-  max-width: 1280px;
+  max-width: 1080px;
   margin: 0 auto;
 }

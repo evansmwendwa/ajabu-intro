@@ -7,6 +7,8 @@ const AppHeader = styled.header`
   width: 100%;
   background: #000;
   color: #FE6A00;
+  top: 0;
+  left: 0;
 
   .container {
     position: relative;
