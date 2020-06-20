@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { useLocalStorage } from "../hooks";
 import {
   SubscribeForm,
   InputBox,
   HorizontalForm,
   InputError,
-  Button
+  Button,
+  SuccessMessage
 } from "./styles";
+import check from "./check.svg";
 
 export default function () {
+  const [loading, setLoading] = useState(false);
+  const [subscribed, setSubscribed] = useLocalStorage(
+    "ajabu_launch_notification", false
+  );
+
   const formik = useFormik({
     initialValues: {
       fullname: '',
@@ -24,13 +32,40 @@ export default function () {
         .email('Invalid email address')
         .required('Email address is required'),
     }),
-    onSubmit: values => {
-      alert(JSON.stringify(values, null, 2));
+    onSubmit: (data) => {
+      setLoading(true);
+      fetch("https://us-central1-influx-dm.cloudfunctions.net/ajabu-subscribe", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      })
+        .then(res => res.json())
+        .then((data) => {
+          console.log(data);
+          setLoading(false);
+          setSubscribed(true);
+        })
+        .catch((error) => {
+          console.log(error);
+          setLoading(false);
+        })
     },
   });
 
+  if (subscribed) {
+    return (
+      <SuccessMessage>
+        <img src={check} alt="" />
+        <span>You are subscribed. We will notify you when we launch</span>
+      </SuccessMessage>
+    )
+  }
+
   return (
     <SubscribeForm>
+      <h3>Get notified when we launch</h3>
       <form onSubmit={formik.handleSubmit}>
         <HorizontalForm>
           <InputBox className="left">
@@ -63,9 +98,13 @@ export default function () {
             )}
           </InputBox>
 
-          <Button type="submit">Notify Me</Button>
+          <Button type="submit" disabled={loading}>
+            {loading && "Please Wait..."}
+            {!loading && "Notify Me"}
+          </Button>
         </HorizontalForm>
       </form>
+
     </SubscribeForm>
   )
 }

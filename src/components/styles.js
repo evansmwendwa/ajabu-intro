@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SubscribeForm = styled.form`
+export const SubscribeForm = styled.div`
   position: relative;
 `;
 
@@ -56,3 +56,20 @@ export const HorizontalForm = styled.div`
     width: 50%;
   }
 `;
+
+export const SuccessMessage = styled.div`
+  position: relative;
+  padding: 20px 0 15px 0;
+  color: #14C74A;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 18px;
+    height: 18px;
+    verticle-align: middle;
+    margin-right: 15px;
+  }
+`

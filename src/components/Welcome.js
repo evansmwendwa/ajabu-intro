@@ -67,8 +67,7 @@ export default function Header() {
         </div>
       </div>
 
-      <div class="subscribe-form">
-        <h3>Get notified when we launch</h3>
+      <div className="subscribe-form">
         <SubscribeForm />
       </div>
 
