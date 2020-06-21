@@ -6,14 +6,23 @@ export const SubscribeForm = styled.div`
 
 export const InputBox = styled.div`
   position: relative;
+  margin-bottom: 12px;
+
+  @media(min-width: 670px) {
+    margin-bottom: 0;
+  }
 
   &.left {
-    padding-right: 6px;
+    @media(min-width: 670px) {
+      padding-right: 6px;
+    }
   }
 
   &.right {
-    padding-left: 6px;
-    padding-right: 12px;
+    @media(min-width: 670px) {
+      padding-left: 6px;
+      padding-right: 12px;
+    }
   }
 
   input {
@@ -51,9 +60,15 @@ export const Button = styled.button`
 
 export const HorizontalForm = styled.div`
   display: flex;
+  flex-wrap: wrap;
   padding: 12px 0;
+
   ${InputBox} {
-    width: 50%;
+    width: 100%;
+
+    @media(min-width: 670px) {
+      width: 35%;
+    }
   }
 `;
 
