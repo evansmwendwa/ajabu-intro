@@ -11,16 +11,28 @@ const Welcome = styled.div`
   padding: 15px;
 
   .welcome-content {
-    display: flex;
+    display: block;
+
+    @media(min-width: 1000px) {
+      display: flex;
+    }
 
     .video {
-      width: 55%;
+      width: 100%;
       padding: 15px;
+
+      @media(min-width: 1000px) {
+        width: 50%;
+      }
     }
 
     .intro {
-      width: 45%;
+      width: 100%;
       padding: 15px;
+
+      @media(min-width: 1000px) {
+        width: 50%;
+      }
 
       h2 {
         font-weight: 500;

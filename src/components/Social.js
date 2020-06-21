@@ -10,7 +10,11 @@ const SocialButtons = styled.div`
   padding: 0 0 10px;
 
   h3 {
-    font-size: 22px;
+    font-size: 18px;
+
+    @media(min-width: 1200px) {
+      font-size: 22px;
+    }
   }
 
   .buttons {

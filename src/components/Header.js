@@ -22,6 +22,16 @@ const AppHeader = styled.header`
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 1px;
+    display: none;
+
+    @media(min-width: 700px) {
+      display: block;
+      margin-right: 30px;
+    }
+
+    @media(min-width: 1080px) {
+      margin-right: 0;
+    }
   }
 
   .logo {
@@ -30,11 +40,21 @@ const AppHeader = styled.header`
     height: 45px;
     line-height: 45px;
     padding-left: 60px;
-    left: 0;
+    left: 50%;
+    margin-left: -75px;
     text-transform: uppercase;
     color: #fff;
     font-weight: 500;
     font-size: 20px;
+
+    @media(min-width: 700px) {
+      left: 0;
+      margin-left: 30px;
+    }
+
+    @media(min-width: 1080px) {
+      margin-left: 0;
+    }
 
     img {
       position: absolute;
