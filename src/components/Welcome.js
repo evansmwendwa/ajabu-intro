@@ -57,7 +57,7 @@ export default function Header() {
     <Welcome>
       <div className="welcome-content">
         <div className="video">
-          <ResponsiveEmbed src='https://www.youtube.com/embed/g_xfjEvcFno?autoplay=1&controls=0&loop=1' />
+          <ResponsiveEmbed src='https://www.youtube.com/embed/nZdLTrHmbBE?autoplay=1&controls=0&loop=1' />
         </div>
         <div className="intro">
           <h2>We have a story to tell</h2>
